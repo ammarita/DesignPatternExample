@@ -3,7 +3,7 @@ package com.designpatterns.decorators;
 public abstract class DrinkDecorator implements Drink {
     protected Drink drink;
 
-    public DrinkDecorator(Drink drink) {
+    protected DrinkDecorator(Drink drink) {
         this.drink = drink;
     }
 

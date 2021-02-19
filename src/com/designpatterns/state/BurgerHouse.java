@@ -1,4 +1,4 @@
-package com.designpatterns;
+package com.designpatterns.state;
 
 import com.designpatterns.builders.BurgerBuilder;
 import com.designpatterns.builders.ReceiptBuilder;
@@ -9,13 +9,12 @@ import com.designpatterns.decorators.Drink;
 import com.designpatterns.decorators.DrinkWithMilkDecorator;
 import com.designpatterns.decorators.Tea;
 import com.designpatterns.director.BurgerMaker;
-import com.designpatterns.state.State;
+import com.designpatterns.facade.BurgerHouseFacade;
 
 public class BurgerHouse {
+    public static final String UNEXPECTED_VALUE = "Unexpected value: ";
+    BurgerHouseFacade burgerHouseFacade = new BurgerHouseFacade();
     private State state = State.READY;
-    private String command;
-
-    public BurgerHouse() {}
 
     public State getState() {
         return this.state;
@@ -23,6 +22,7 @@ public class BurgerHouse {
 
     public void openBurgerHouse() {
         System.out.println("Opening Burger House");
+        burgerHouseFacade.prepareBurgerHouseForDay();
         waitOrder();
     }
 
@@ -32,7 +32,6 @@ public class BurgerHouse {
     }
 
     public void checkState(String command) {
-        this.command = command;
         if (getState() == State.READY) {
             switch (command) {
                 case "burger":
@@ -44,6 +43,9 @@ public class BurgerHouse {
                 case "close":
                     closeBurgerHouse();
                     break;
+                default:
+                    this.state = State.READY;
+                    throw new IllegalStateException(UNEXPECTED_VALUE + command);
             }
         } else if (getState() == State.MAKE_BURGER) {
             switch (command) {
@@ -52,6 +54,9 @@ public class BurgerHouse {
                 case "mushroom":
                     buildBurger(command);
                     break;
+                default:
+                    this.state = State.READY;
+                    throw new IllegalStateException(UNEXPECTED_VALUE + command);
             }
 
         } else if (getState() == State.MAKE_DRINK) {
@@ -62,6 +67,9 @@ public class BurgerHouse {
                 case "white tea":
                     brewDrink(command);
                     break;
+                default:
+                    this.state = State.READY;
+                    throw new IllegalStateException(UNEXPECTED_VALUE + command);
             }
         }
     }
@@ -85,6 +93,9 @@ public class BurgerHouse {
             case "white coffee":
                 coffeeWithMilk.makeDrink();
                 break;
+            default:
+                this.state = State.READY;
+                throw new IllegalStateException(UNEXPECTED_VALUE + drinkType);
         }
 
         this.state = State.READY;
@@ -92,6 +103,7 @@ public class BurgerHouse {
 
     private void closeBurgerHouse() {
         System.out.println("Closing Burger House");
+        burgerHouseFacade.closeBurgerHouseForNight();
         this.state = State.CLOSE;
     }
 
@@ -123,6 +135,9 @@ public class BurgerHouse {
                 burgerMaker.buildMushroomBurger(burgerBuilder);
                 burgerMaker.buildMushroomBurger(receiptBuilder);
                 break;
+            default:
+                this.state = State.READY;
+                throw new IllegalStateException(UNEXPECTED_VALUE + burgerType);
         }
 
         Burger burger = burgerBuilder.buildBurger();

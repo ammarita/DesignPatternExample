@@ -8,10 +8,10 @@ public class DrinkWithMilkDecorator extends DrinkDecorator {
     @Override
     public void makeDrink() {
         drink.makeDrink();
-        addMilk(drink);
+        addMilk();
     }
 
-    private void addMilk(Drink drink) {
+    private void addMilk() {
         System.out.println("Adding milk!");
     }
 }

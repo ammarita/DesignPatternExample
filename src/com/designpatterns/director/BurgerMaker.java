@@ -11,32 +11,32 @@ import com.designpatterns.ingredients.Size;
 
 public class BurgerMaker {
     public void buildVegetarianBurger(Builder builder) {
-        builder.setBurgerType(BurgerType.Vegetarian);
-        builder.setSize(Size.Medium);
-        builder.setBun(Bun.Ciabatta);
-        builder.setCheese(Cheese.Brie);
-        builder.setPatty(Patty.Soybean);
-        builder.setSalad(Salad.Tomato);
-        builder.setSauce(Sauce.Hot);
+        builder.setBurgerType(BurgerType.VEGETARIAN);
+        builder.setSize(Size.MEDIUM);
+        builder.setBun(Bun.CIABBATA);
+        builder.setCheese(Cheese.BRIE);
+        builder.setPatty(Patty.SOYBEAN);
+        builder.setSalad(Salad.TOMATO);
+        builder.setSauce(Sauce.HOT);
     }
 
     public void buildMushroomBurger(Builder builder) {
-        builder.setBurgerType(BurgerType.Mushroom);
-        builder.setSize(Size.Small);
-        builder.setBun(Bun.Kaiser);
-        builder.setCheese(Cheese.Gouda);
-        builder.setPatty(Patty.Portabello);
-        builder.setSalad(Salad.Iceberg);
-        builder.setSauce(Sauce.Tomato);
+        builder.setBurgerType(BurgerType.MUSHROOM);
+        builder.setSize(Size.SMALL);
+        builder.setBun(Bun.KAISER);
+        builder.setCheese(Cheese.GOUDA);
+        builder.setPatty(Patty.PORTABELLO);
+        builder.setSalad(Salad.ICEBERG);
+        builder.setSauce(Sauce.TOMATO);
     }
 
     public void buildMeatBurger(Builder builder) {
-        builder.setBurgerType(BurgerType.Meat);
-        builder.setSize(Size.Large);
-        builder.setBun(Bun.Onion);
-        builder.setCheese(Cheese.Stilton);
-        builder.setPatty(Patty.Lamb);
-        builder.setSalad(Salad.Romaine);
-        builder.setSauce(Sauce.Mustard);
+        builder.setBurgerType(BurgerType.MEAT);
+        builder.setSize(Size.LARGE);
+        builder.setBun(Bun.PRETZEL);
+        builder.setCheese(Cheese.STILTON);
+        builder.setPatty(Patty.LAMB);
+        builder.setSalad(Salad.ROMAINE);
+        builder.setSauce(Sauce.MUSTARD);
     }
 }
