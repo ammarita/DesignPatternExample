@@ -43,6 +43,7 @@ public class DesignPatternDemo {
     }
 
     private static void checkInventory() {
+        System.out.println("Check inventory after closing:");
         InventoryComponent burgerCatalog = new ItemCatalog("Burgers");
         InventoryComponent bun = new Item("Box of burger buns", 20);
         InventoryComponent patty = new Item("Package of patties", 32);

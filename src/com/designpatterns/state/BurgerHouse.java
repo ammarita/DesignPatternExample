@@ -21,8 +21,10 @@ public class BurgerHouse {
     }
 
     public void openBurgerHouse() {
-        System.out.println("Opening Burger House");
+        System.out.println("*** Opening Burger House ***");
+        printLineSeparator();
         burgerHouseFacade.prepareBurgerHouseForDay();
+        printLineSeparator();
         waitOrder();
     }
 
@@ -99,11 +101,14 @@ public class BurgerHouse {
         }
 
         this.state = State.READY;
+        printLineSeparator();
     }
 
     private void closeBurgerHouse() {
-        System.out.println("Closing Burger House");
+        System.out.println("*** Closing Burger House ***");
+        printLineSeparator();
         burgerHouseFacade.closeBurgerHouseForNight();
+        printLineSeparator();
         this.state = State.CLOSE;
     }
 
@@ -147,5 +152,10 @@ public class BurgerHouse {
                 "Order ready: " + receipt.printReceipt());
 
         this.state = State.READY;
+        printLineSeparator();
+    }
+
+    private void printLineSeparator() {
+        System.out.println("--- --- --- --- ---");
     }
 }

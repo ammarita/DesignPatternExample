@@ -12,6 +12,6 @@ public class TVSet extends Equipment {
         this.channel = channel;
         this.soundLevel = soundLevel;
 
-        System.out.println("Turning on + " + channel + "and setting TV volume to " + soundLevel);
+        System.out.println("Turning on " + channel + " and setting TV volume to " + soundLevel);
     }
 }

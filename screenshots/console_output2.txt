@@ -1,0 +1,48 @@
+*** Opening Burger House ***
+--- --- --- --- ---
+Entering keycode to set Alarm System off
+Alarm System is turned off
+Turning on Sign Light
+Turning on Lights inside
+Turning on Coffee Machine
+Turning on Burger Grill
+Setting heat level of Burger Grill to 7 level
+Turning on Hall TV Set
+Turning on BBC and setting TV volume to 12
+Turning on Cash Register
+--- --- --- --- ---
+We are ready to take your order
+Choose Burger
+One burger made: VEGETARIAN
+Order ready: Order: VEGETARIAN burger in MEDIUM size
+Bun: CIABBATA
+Patty: SOYBEAN
+Cheese: BRIE
+Salad: TOMATO
+Sauce: HOT
+--- --- --- --- ---
+Choose Drink
+Making tea
+--- --- --- --- ---
+*** Closing Burger House ***
+--- --- --- --- ---
+Turning off Coffee Machine
+Turning off Burger Grill
+Turning off Sign Light
+Turning off Lights inside
+Taking out 214.63 EUR from Cash Register
+Turning off Cash Register
+Turning off Hall TV Set
+Entering keycode to set Alarm System on
+Turning on Alarm System
+--- --- --- --- ---
+Check inventory after closing:
+Item: Box of burger buns, unit count: 20
+Item: Package of patties, unit count: 32
+Item: Package of cheese, unit count: 15
+Item: Pack of salad, unit count: 10
+Item: Bottle of sauce, unit count: 21
+Item: Box of grounded coffee, unit count: 8
+Item: Package of tea, unit count: 4
+Item: Bottle of milk, unit count: 16
+Item: Package of sugar, unit count: 11

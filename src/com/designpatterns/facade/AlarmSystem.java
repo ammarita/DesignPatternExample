@@ -8,13 +8,13 @@ public class AlarmSystem extends Equipment {
 
     @Override
     public void turnOn() {
-        System.out.println("Enter keycode to set " + equipmentUnit + " on");
+        System.out.println("Entering keycode to set " + equipmentUnit + " on");
         super.turnOn();
     }
 
     @Override
     public void turnOff() {
-        System.out.println("Enter keycode to set " + equipmentUnit + " off");
+        System.out.println("Entering keycode to set " + equipmentUnit + " off");
         super.turnOff();
     }
 }
