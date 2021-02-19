@@ -10,16 +10,6 @@ public class Item extends InventoryComponent {
     }
 
     @Override
-    public String getName() {
-        return super.getName();
-    }
-
-    @Override
-    public int getCount() {
-        return super.getCount();
-    }
-
-    @Override
     public void print() {
         System.out.println("Item: " + name + ", unit count: " + count);
     }
